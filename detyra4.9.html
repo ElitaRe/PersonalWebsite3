@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!-- Fig. 5.10: imageborder.html -->
+<!-- Stretching and repeating an image to create a border. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Border</title>
+    <style type="text/css">
+        div {
+            border-width: 30px;
+            width: 234px;
+            padding: 20px 20px;
+        }
+
+        #stretch {
+            border: 15px solid transparent;
+            padding: 15px;
+            border-image-source: url(border.jpg);
+            border-image-repeat: repeat;
+            border-image-slice: 30;
+        }
+
+        #repeat {
+            border: 15px solid transparent;
+            padding: 15px;
+            border-image: url(border.jpg);
+            border-image-slice: 30;
+            border-image-repeat: stretch;
+
+        }
+    </style>
+</head>
+
+<body>
+
+<button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>    
+    <h2>Image Borders</h2>
+    <img src="border.jpg" alt="image used to demonstrate borders">
+    <p>
+    <div id="stretch">Stretching the image border</div>
+    </p>
+    <p>
+    <div id="repeat">Repeating the image border</div>
+    </p>
+</body>
+
+</html>

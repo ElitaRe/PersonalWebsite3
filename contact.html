@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style5.css">
+    <script src="https://kit.fontawesome.com/9428470655.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="all-content">
+     <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><img src="images/logo.png" width="90" alt="logo"></div>
+            <ul class="menu open" id="menu">
+                <li><a href="index.html" class="menu-btn">Home</a></li>
+                <li><a href="about.html" class="menu-btn">About</a></li>
+                <li><a href="services.html" class="menu-btn">Services</a></li>
+                <li><a href="assignments.html" class="menu-btn">Assignments</a></li>
+                <li><a href="contact.html" class="menu-btn">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars" onclick="showMenu()" id="bar"></i>
+            </div>
+        </div>
+    </nav>
+
+
+          <!-- contact section start -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">To contact me:</div>
+                    <p><ul>        
+             <li>on instagram: <a href="https://www.instagram.com/elitarexha/" target="_blank">elitarexha</a></li>
+         </ul>
+     </p>
+     <p>
+         <ul>       
+             <li> on Facebook: <a href="https://www.facebook.com/elita.rexha.9" target="_blank">Elita Rexha</a></li>
+         </ul>
+     </p>
+     <p>
+        <ul>        
+             <li>on email: elita.rexha@gmail.com</li>
+         </ul>
+     </p>
+     <p>
+        <ul>        
+             <li>on my number: +38349664799</li>
+         </ul></p>
+
+                <div class="icons">
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message me</div>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="flex">
+        <div class="photo">
+          <img src="images/cm2.png" alt="">
+        </div>
+        <div class="text">
+          <h1>Feel Free to Contact me</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer>
+        <span>Created By <a href="https://www.codingnepalweb.com">Elita Rexha</a> | <span class="far fa-copyright"></span> 1/6/2021 All rights reserved.</span>
+    </footer>    
+    <script>
+      if(window.innerWidth <= 947) {
+        document.getElementById('menu').classList.remove('open');
+        document.getElementById('menu').classList.add('close');
+      }
+    </script>
+    <script>
+      function showMenu() {
+        var menu = document.getElementById('menu');
+        if(menu.classList.contains('open')) {
+          menu.classList.remove('open');
+          menu.classList.add('close');
+        }
+        else {
+          menu.classList.remove('close');
+          menu.classList.add('open');
+        }
+      }
+    </script>
+  </div>
+   
+</body>
+</html>
