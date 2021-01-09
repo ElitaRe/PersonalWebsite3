@@ -262,6 +262,9 @@ footer span a:hover{
     }
 }
 @media (max-width: 947px){
+	.all-content {
+		width: 100%
+	}
     .menu-btn{
         display: block;
         z-index: 999;
@@ -279,6 +282,12 @@ footer span a:hover{
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
+    }
+    .navbar {
+    	width: 100%;
+    }
+    footer {
+    	width: 100%;
     }
     .navbar .menu.active{
         left: 0;

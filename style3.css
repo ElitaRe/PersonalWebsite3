@@ -29,6 +29,8 @@ html{
 /* all similar content styling codes */
 section{
     padding: 100px 0;
+    width: 1000px;
+    margin: auto;
 }
 .all-content {
 	width: 1000px;
@@ -84,7 +86,7 @@ section .title::after{
 /* navbar styling */
 .navbar{
     position: fixed;
-    width: 100%;
+    width: 1000px;
     z-index: 999;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
@@ -291,6 +293,8 @@ footer{
     padding: 15px 23px;
     color: #fff;
     text-align: center;
+    width: 1000px;
+    margin: auto;
 }
 footer span a{
     color: crimson;
@@ -317,16 +321,41 @@ footer span a:hover{
 
 @media (max-width: 991px) {
     .max-width{
-        padding: 0 50px;
+        width: 80%;
+        padding: 0;
+        margin: 0;
+    }
+    .about .about-content, .services .serv-content, .skills .skills-content, .contact .contact-content {
+    	display: block;
+    	width: 80%;
+    	margin: auto;
+    }
+    .services .serv-content .card {
+    	width: 100%;
     }
 }
 @media (max-width: 947px){
+	.all-content {
+		width: 100%;
+	}
     .menu-btn{
         display: block;
         z-index: 999;
     }
+    .services, .teams {
+    	width: 100%;
+    }
     .menu-btn i.active:before{
         content: "\f00d";
+    }
+    .navbar {
+    	width: 100%;
+    }
+    section {
+    	width: 100%;
+    }
+    footer {
+    	width: 100%;
     }
     .navbar .menu{
         position: fixed;
@@ -362,6 +391,7 @@ footer span a:hover{
     }
     .max-width{
         max-width: 930px;
+        margin: auto;
     }
     .about .about-content .column{
         width: 100%;
@@ -386,9 +416,6 @@ footer span a:hover{
 }
 
 @media (max-width: 690px) {
-    .max-width{
-        padding: 0 23px;
-    }
     .home .home-content .text-2{
         font-size: 60px;
     }
@@ -400,6 +427,8 @@ footer span a:hover{
     }
     .services .serv-content .card{
         width: 100%;
+        margin: auto;
+        margin-bottom: 1rem;
     }
 }
 
