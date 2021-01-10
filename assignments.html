@@ -16,7 +16,7 @@
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><img src="images/logo.png" width="90" alt="logo"></div>
-            <ul class="menu">
+            <ul class="menu open" id="menu">
                 <li><a href="index.html" class="menu-btn">Home</a></li>
                 <li><a href="about.html" class="menu-btn">About</a></li>
                 <li><a href="services.html" class="menu-btn">Services</a></li>
@@ -24,7 +24,7 @@
                 <li><a href="contact.html" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" onclick="showMenu()" id="bar"></i>
             </div>
         </div>
     </nav>
@@ -167,6 +167,37 @@
     </footer>    
 
     </div>
-    
+     <div class="sidebar">
+        <div class="news">
+            <h1>News For Developers</h1>
+            <div class="new">
+                <img src="https://developer-tech.com/wp-content/uploads/sites/3/2021/01/github-iran-us-sanctions-usa-america-developer-platforms-tools-development-2048x1365.jpg" alt="">
+                <h1>GitHub is restored in Iran after US gov permits sanctions exemption</h1>
+                <a href="https://developer-tech.com/news/2021/jan/08/github-restored-iran-us-gov-permits-sanctions-exemption/">Watch More</a>
+            </div>
+        </div>
+        <div class="sidebar-bottom">
+            
+        </div>
+    </div>
+    <script>
+      if(window.innerWidth <= 947) {
+        document.getElementById('menu').classList.remove('open');
+        document.getElementById('menu').classList.add('close');
+      }
+    </script>
+    <script>
+      function showMenu() {
+        var menu = document.getElementById('menu');
+        if(menu.classList.contains('open')) {
+          menu.classList.remove('open');
+          menu.classList.add('close');
+        }
+        else {
+          menu.classList.remove('close');
+          menu.classList.add('open');
+        }
+      }
+    </script>
 </body>
 </html>

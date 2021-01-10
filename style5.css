@@ -10,7 +10,9 @@
 html{
     scroll-behavior: smooth;
 }
-
+body {
+    display: flex;
+}
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -95,6 +97,7 @@ section .title::after{
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
     background-color: black;
+    top:0;
 }
 .navbar.sticky{
     padding: 15px 0;
@@ -305,8 +308,6 @@ footer{
     padding: 15px 23px;
     color: #fff;
     text-align: center;
-    position: fixed;
-    bottom: 0;
     width: 1000px;
 }
 footer span a{
@@ -317,7 +318,58 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+.sidebar {
+float: right;
+width: 30%;
+height: auto;
+border: 1px solid white;
+margin-left: auto;
+margin-right: auto;
+}
 
+.sidebar-bottom {display: none;}
+
+.news {
+    width:90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.news div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+.news img {
+    width:100%;
+}
+.news h1 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.news > h1 {
+    font-size: 33px;
+    color: crimson;
+}
+.news a {
+    font-size: 17px;
+    color:crimson;
+}
+
+@media screen and (max-width: 480px) {
+.sidebar {display: none;}
+.sidebar-bottom {
+display: block;
+position: relative;
+width: 90%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 20px;
+border: 1px solid white;
+background: white;
+}
+}
 /* responsive media query start */
 @media (max-width: 1300px) {
     .home .max-width{
@@ -336,6 +388,12 @@ footer span a:hover{
     .all-content {
         width: 100%;
         margin: auto;
+    }
+    body {
+        display:block;
+    }
+    .sidebar {
+        width: 100%;
     }
     .max-width {
         padding: 0;
