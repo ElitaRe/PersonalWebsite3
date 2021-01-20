@@ -16,19 +16,27 @@
     <nav class="navbar">
        <div class="max-width">
             <div class="logo"><img src="images/logo.png" width="90" alt="logo"></div>
-            <ul class="menu open" id="menu">
+            <ul class="men" id="menu">
                 <li><a href="index.html" class="menu-btn">Home</a></li>
                 <li><a href="about.html" class="menu-btn">About</a></li>
                 <li><a href="services.html" class="menu-btn">Services</a></li>
                 <li><a href="assignments.html" class="menu-btn">Assignments</a></li>
                 <li><a href="contact.html" class="menu-btn">Contact</a></li>
             </ul>
-            <div class="menu-btn">
+            <div class="menu-open">
                 <i class="fas fa-bars" onclick="showMenu()" id="bar"></i>
             </div>
         </div>
     </nav>
-
+    <div class="mobile-menu" id="mobile-menu">
+            <ul class="nav">
+                <li><a href="index.html" class="menu-btn">Home</a></li>
+                <li><a href="about.html" class="menu-btn">About</a></li>
+                <li><a href="services.html" class="menu-btn">Services</a></li>
+                <li><a href="assignments.html" class="menu-btn">Assignments</a></li>
+                <li><a href="contact.html" class="menu-btn">Contact</a></li>
+            </ul>
+        </div>
 <!-- services section start -->
     <section class="services" id="services">
         <div class="max-width">
@@ -116,14 +124,8 @@
         </div>
     </div>
     <script>
-      if(window.innerWidth <= 947) {
-        document.getElementById('menu').classList.remove('open');
-        document.getElementById('menu').classList.add('close');
-      }
-    </script>
-    <script>
       function showMenu() {
-        var menu = document.getElementById('menu');
+        var menu = document.querySelector('.mobile-menu');
         if(menu.classList.contains('open')) {
           menu.classList.remove('open');
           menu.classList.add('close');

@@ -138,9 +138,34 @@ section .title::after{
 .navbar .menu li a:active{
     color: black;
 }
-
+.mobile-menu {
+    display: none;
+    text-align: center;
+    background: white;
+    position: absolute;
+    z-index: 10000;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    border-radius: 15px;
+    background:crimson;
+}
+.mobile-menu li {
+    margin: 1rem 0;
+    padding:1rem;
+    border-bottom: 1px solid white
+}
+.mobile-menu li:last-child {
+    border-bottom:0;
+}
+.open {
+    display: block;
+}
+.close {
+    display: none;
+}
 /* menu btn styling */
-.menu-btn{
+.menu-btn, .menu-open{
     color: #fff;
     font-size: 23px;
     cursor: pointer;
@@ -328,9 +353,18 @@ background: white;
     .all-content{
         width:100%;
     }
-    .menu-btn{
+    nav ul {
+        display: none;
+    }
+    a.menu-btn{
         display: block;
         z-index: 999;
+    }
+    div.menu-btn {
+        color: white;
+    }
+    .menu-btn, .menu-open {
+        display: block;
     }
     .menu-btn i.active:before{
         content: "\f00d";
