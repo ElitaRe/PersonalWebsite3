@@ -201,9 +201,7 @@ section .title::after{
 
 /* about section styling */
 
-.title::after{
-    content: "more about me";
-}
+
 .left{
     width: 45%;
 }
