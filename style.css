@@ -250,9 +250,6 @@ section .title::after{
     background: none;
 }
 
-.title::after{
-    content: "me";
-}
 .left{
     width: 45%;
 }
