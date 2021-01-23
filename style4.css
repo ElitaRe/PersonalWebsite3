@@ -199,9 +199,6 @@ section .title::after{
     filter: brightness(90%);
 }
 
-.assignments .title::after{
-    content: "projects & hw";
-}
 .dropbtn {
   background-color: crimson;
   color: white;
