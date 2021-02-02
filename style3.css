@@ -88,7 +88,7 @@ section .title::after{
 /* navbar styling */
 .navbar{
     position: fixed;
-    width: 1000px;
+    width: 964px;
     z-index: 999;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
