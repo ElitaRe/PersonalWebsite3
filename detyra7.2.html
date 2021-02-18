@@ -13,5 +13,13 @@ for (var counter = 1; counter <= 7; ++counter )
 document.writeln("<p style = 'font-size: " +
 counter + "ex'>HTML5 font size " + counter + "ex</p>" );
 </script>
-</head> <body></body>
+</head> <body>
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</body>
 </html>

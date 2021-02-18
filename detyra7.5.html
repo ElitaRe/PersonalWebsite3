@@ -36,7 +36,7 @@ break;
 } //end switch
 if ( validInput === true)
 {
-document.writeln( listType + startTag;
+document.writeln( listType + startTag)
 for ( var i = 1; i <= 3; ++i)
 document.writeln( "<li>List item"
 + i + "</li>" );
@@ -45,5 +45,12 @@ document.writeln( endTag);
 else
 document.writeln( "Invalid choice: " + choice );
 </script>
-</head> <body></body>
+</head> <body>
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script></body>
 </html>
