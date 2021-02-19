@@ -1,33 +1,28 @@
-// Fig. 11.5: Character Processing.js
-// String methods charAt, charCodeAt, fromCharCode,
-// toLowercase and toUpperCase.
-function start()
-{
-var s = "ZEBRA";
-var s2 = "AbCdEfG";
-var result = "";
-result = "<p>Character at index 0 in " + S + " is " +
-s.charAt( 0 ) + "</p>";
-result += "<p>Character code at index 0 in + S +
-s.charCodeAt(0) + "</p>";
-11 is
-+
-result += "<p>"" + String.fromCharCode( 87, 79, 82, 68 ) +
-"contains character codes 87, 79, 82 and 68</p>";
-20-21 / 72
-1.5 | String methods charAt, charCodeAt, fromCharCode,
-wercase and toUpperCase. (Part 1 of 2.)
-©1992-2012 by Pearson Education, Inc. All
-Rights Reserved.
-+
-"!</p>";
-result += "<p>"" + S2 + " in lowercase is""
-s2.toLowerCase() +
-result += "<p>"" + 32 +
-in uppercase is
-s2.toUpperCase() +
-+
-"'</p>";
-document.getElementById( "results").innerHTML = result;
-} // end function start
-window.addEventListener( "load", start, false);
+<!DOCTYPE html>
+<!-- Fig. 11.6: SearchingStrings.html -->
+<!-- HTML document to demonstrate methods indexOf and lastIndexOf. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Searching Strings</title>
+<link rel = "stylesheet" type = "text/css" href = "stylle.css">
+<script src = "SearchingStrings.js"></script>
+</head>
+<body>
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<form id = "searchForm" action="#">
+<h1>The string to search is:
+abcdefghijklmnopqrstuvwxyzabcdefghijklm</h1>
+<p>Enter the substring to search for
+<input id="inputField" type="search">
+<input id = "searchButton" type="button" value = "Search"></p>
+<div id = "results"></div>
+</form>
+</body>
+</html>

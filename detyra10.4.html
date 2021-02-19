@@ -1,29 +1,28 @@
-// Fig. 11.7: SearchingStrings.js
-// Searching strings with indexOf and lastIndexOf.
-var letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklm";
-function buttonPressed()
-{
-var inputField = document.getElementById("inputField" );
-document.getElementById( "results").innerHTML =
-"<p>First occurrence is located at index
-letters.indexOf( inputField.value ) + "</p>" +
-"<p>Last occurrence is located at index " +
-letters.lastIndexOf( inputField.value) + "</p>" +
-"<p>First occurrence from index 12 is located at index
-letters.indexOf( inputField.value, 12 ) + "</p>" +
-"<p>Last occurrence from index 12 is located at index"
-letters.lastIndexOf( inputField.value, 12 ) + "</p>";
-} // end function buttonPressed
-+
-+
-11.7 | Searching strings with indexOf and lastIndexOf. (Part
-2.)
-©1992-2012 by Pearson Education, Inc. All
-Rights Reserved.
-// register click event handler for searchButton
-function start()
-{
-var searchButton document.getElementById( "searchButton" );
-searchButton.addEventListener("click", buttonPressed, false);
-} // end function start
-window.addEventListener("load", start, false );
+<!DOCTYPE html>
+<!-- Fig. 11.11: DateTime.html -->
+<!-- HTML document to demonstrate Date-object methods. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Date and Time Methods</title>
+<link rel="stylesheet" type="text/css" href = "stylle.css">
+<script src = "DateTime.js"></script>
+</head>
+<body>
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<h1>String representations and valueOf</h1>
+<section id = "strings"></section>
+<h1>Get methods for local time zone</h1>
+<section id = "getMethods"></section>
+<h1>Specifying arguments for a new Date</h1>
+<section id = "newArguments"></section>
+<h1>Set methods for local time zone</h1>
+<section id = "setMethods"></section>
+</body>
+</html>

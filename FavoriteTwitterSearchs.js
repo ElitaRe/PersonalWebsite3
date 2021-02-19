@@ -12,16 +12,12 @@ document.getElementById( "welcomeMessage" ).innerHTML =
 "Welcome to the Favorite Twitter Searches App";
 } // end if
 var length = localStorage.length; // number of key/value pairs
-tags []; // create empty array
+tags = []; // create empty array
 // load all keys
 for (var i = 0; i < length; ++i)
 {
 tags[i] = localStorage.key(i);
 } // end for
-11.19 | Storing and retrieving key/value pairs using HTML5
-alStorage and sessionStorage. (Part 1 of 4.)
-©1992-2012 by Pearson Education, Inc. All
-Rights Reserved.
 tags.sort(); // sort the keys
 var markup = "<ul>"; // used to store search link markup
 var url = "http://search.twitter.com/search?q=";
@@ -29,21 +25,19 @@ var url = "http://search.twitter.com/search?q=";
 for (var tag in tags)
 {
 var query = url + localStorage.getItem(tags[tag]);
-markup += "<li><span><a href = + query + "'>" + tags [tag] +
+markup += "<li><span><a href = ' " + query + "'>" + tags [tag] +
 "</a></span>" +
-"<input id = + tags[tag] + " type = 'button'
+"<input id =' " + tags[tag] + " ' type = 'button' " +
 "value = 'Edit' onclick = 'editTag(id)'>" +
-"<input id = "" + tags [tag] + "\ type = 'button'
+"<input id = ' " + tags [tag] + " ' type = 'button' " +
 "value = 'Delete' onclick = 'deleteTag(id)'>";
 } // end for
-+
-+
 markup += "</ul>";
 document.getElementById("searches").innerHTML
 } // end function loadSearches
 markup;
 // deletes all key/value pairs from localStorage
-function clearAll Searches ()
+function clearAllSearches ()
 {
 localStorage.clear();
 loadSearches(); // reload searches
@@ -54,9 +48,8 @@ function saveSearch()
 var query = document.getElementById("query");
 var tag = document.getElementById("tag");
 localStorage.setItem(tag.value, query.value);
-tag.value = "; // clear tag input
-query.value =
-"'"'; // clear query input
+tag.value = ""; // clear tag input
+query.value = ""; // clear query input
 loadSearches(); // reload searches
 } // end function save Search
 // deletes a specific key/value pair from localStorage
@@ -65,10 +58,6 @@ function deleteTag( tag )
 localStorage.removeItem( tag );
 loadSearches(); // reload searches
 } // end function deleteTag
-11.19 | Storing and retrieving key/value pairs using HTML5
-alStorage and sessionStorage. (Part 3 of 4.)
-©1992-2012 by Pearson Education, Inc. All
-Rights Reserved.
 // display existing tagged query for editing
 function editTag( tag )
 {

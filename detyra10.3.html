@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<!-- Fig. 11.6: SearchingStrings.html -->
-<!-- HTML document to demonstrate methods indexOf and lastIndexOf. -->
+<!-- Fig. 11.8: SplitAndSubString.html -->
+<!-- HTML document demonstrating String methods split and substring. -->
 <html>
 <head>
-<meta charset="utf-8">
-<title>Searching Strings</title>
-<link rel = "stylesheet" type = "text/css" href = "style.css">
-<script src = "SearchingStrings.js"></script>
+<meta charset = "utf-8">
+<title>split and substring</title>
+<link rel = "stylesheet" type = "text/css" href = "stylle.css">
+<script src = "SplitAndSubString.js"></script>
 </head>
 <body>
-<form id = "searchForm" action="#">
-<h1>The string to search is:
-abcdefghijklmnopqrstuvwxyzabcdefghijklm</h1>
-<p>Enter the substring to search for
-<input id="inputField" type="search">
-<input id = "searchButton" type="button" value = "Search"></p>
-<div id = "results"></div>
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<form action = "#"
+<p>Enter a sentence to split into words:</p>
+<p><input id="inputField" type = "text">
+<input id = "splitButton" type = "button" value = "Split"></p>
+<div id = "results"></p>
 </form>
 </body>
 </html>
