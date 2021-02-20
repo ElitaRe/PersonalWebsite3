@@ -11,6 +11,13 @@
 		<script src="PassArray.js"></script>
 </head>
 <body>
+	<button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 	<h2>Effects of passing entire array by reference</h2>
 	<p id="originalArray"></p>
 	<p id="modifiedArray"></p>
